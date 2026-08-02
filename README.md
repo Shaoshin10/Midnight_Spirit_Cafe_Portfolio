@@ -13,14 +13,14 @@
 
 | Café-Hauptansicht | Mitarbeitersystem |
 |---|---|
-| <img src="docs/screenshots/cafe_uebersichtsicht.jpg" alt="Hauptansicht des Cafés" width="450"> | <img src="docs/screenshots/mitarbeiter.jpg" alt="Übersicht der Mitarbeitenden" width="450"> |
+| <img src="docs/screenshots/cafe_uebersicht.jpg" alt="Hauptansicht des Cafés" width="450"> | <img src="docs/screenshots/mitarbeiter.jpg" alt="Übersicht der Mitarbeitenden" width="450"> |
 | Gäste, Tische, Bestellungen und zentrale Caféverwaltung | Verwaltung des Teams und der Mitarbeitenden |
 
 ### Rekrutierung und Schichtplanung
 
 | Mitarbeitende rekrutieren | Schichten planen |
 |---|---|
-| <img src="docs/screenshots/recruit_system.jpg" alt="Rekrutierung neuer Mitarbeitender" width="450"> | <img src="docs/screenshots/schichtenplanung.jpg" alt="Planung der Arbeitsschichten" width="450"> |
+| <img src="docs/screenshots/recruit_system.jpg" alt="Rekrutierung neuer Mitarbeitender" width="450"> | <img src="docs/screenshots/schichtplanung.jpg" alt="Planung der Arbeitsschichten" width="450"> |
 | Auswahl und Rekrutierung neuer Teammitglieder | Einteilung der Mitarbeitenden in verschiedene Schichten |
 
 ### Rezepte und Upgrades
