@@ -13,28 +13,28 @@
 
 | Café-Hauptansicht | Mitarbeitersystem |
 |---|---|
-| <img src="docs/screenshots/cafe_ansicht.jpg" alt="Hauptansicht des Cafés" width="450"> | <img src="docs/screenshots/team_mitarbeiter_ansicht.jpg" alt="Übersicht der Mitarbeitenden" width="450"> |
+| <img src="docs/screenshots/cafe_uebersichtsicht.jpg" alt="Hauptansicht des Cafés" width="450"> | <img src="docs/screenshots/mitarbeiter.jpg" alt="Übersicht der Mitarbeitenden" width="450"> |
 | Gäste, Tische, Bestellungen und zentrale Caféverwaltung | Verwaltung des Teams und der Mitarbeitenden |
 
 ### Rekrutierung und Schichtplanung
 
 | Mitarbeitende rekrutieren | Schichten planen |
 |---|---|
-| <img src="docs/screenshots/recruit_ansicht.jpg" alt="Rekrutierung neuer Mitarbeitender" width="450"> | <img src="docs/screenshots/schichten_ansicht.jpg" alt="Planung der Arbeitsschichten" width="450"> |
+| <img src="docs/screenshots/recruit_system.jpg" alt="Rekrutierung neuer Mitarbeitender" width="450"> | <img src="docs/screenshots/schichtenplanung.jpg" alt="Planung der Arbeitsschichten" width="450"> |
 | Auswahl und Rekrutierung neuer Teammitglieder | Einteilung der Mitarbeitenden in verschiedene Schichten |
 
 ### Rezepte und Upgrades
 
 | Rezeptverwaltung | Café-Upgrades |
 |---|---|
-| <img src="docs/screenshots/rezepte_ansicht.jpg" alt="Verwaltung der Rezepte" width="450"> | <img src="docs/screenshots/upgrade_ansicht.jpg" alt="Übersicht der Café-Upgrades" width="450"> |
+| <img src="docs/screenshots/rezepte.jpg" alt="Verwaltung der Rezepte" width="450"> | <img src="docs/screenshots/upgrades.jpg" alt="Übersicht der Café-Upgrades" width="450"> |
 | Freischaltung und Verbesserung verschiedener Rezepte | Weiterentwicklung und Ausbau des Cafés |
 
 ### Warenlieferung
 
 <p align="center">
   <img
-    src="docs/screenshots/waren_lieferung_ansicht.jpg"
+    src="docs/screenshots/lieferung.jpg"
     alt="Verwaltung der Warenlieferung"
     width="700"
   >
