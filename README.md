@@ -214,7 +214,7 @@ Ein geführter Code-Walkthrough des privaten Projekts kann im Rahmen eines Bewer
 ## Autor
 
 **Justin Plath**  
-Softwareentwicklung mit Schwerpunkt auf systemorientierten Anwendungen, Zustandsverwaltung und pragmatischer Problemlösung.
+Softwareentwicklung mit Schwerpunkt auf anwendungsnaher Problemlösung, strukturierter Systemarchitektur und nachvollziehbarer technischer Dokumentation.
 
 Kontakt über mein GitHub-Profil.
 
