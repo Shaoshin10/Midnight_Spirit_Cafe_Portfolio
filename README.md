@@ -1,220 +1,225 @@
 # Midnight Spirit Café
 
-**Midnight Spirit Café** ist ein in Godot entwickelter Idle-Management-Prototyp. Spielende bauen ein kleines nächtliches Café auf, verwalten Zutaten und Rezepte, bedienen Gäste, organisieren Mitarbeitende und verbessern den Betrieb schrittweise.
+![Status](https://img.shields.io/badge/Status-Spielbarer%20Prototyp-6f42c1)
+![Engine](https://img.shields.io/badge/Godot-4.7-478CBF?logo=godot-engine&logoColor=white)
+![Sprache](https://img.shields.io/badge/GDScript-Portfolio--Auszug-478CBF)
+![Repository](https://img.shields.io/badge/Repository-Dokumentation%20ohne%20Produktionscode-2f855a)
 
-> **Projektstatus:** Aktiv in Entwicklung  
-> **Engine:** Godot 4.7  
-> **Programmiersprache:** GDScript  
-> **Genre:** Idle Game / Café Management
+**Midnight Spirit Café** ist ein von mir entwickelter Idle-Management-Prototyp in Godot.  
+Spielende betreiben ein nächtliches Café, verwalten Gäste, Bestellungen, Zutaten, Mitarbeitende, Schichten, Rekrutierungen, Upgrades und zeitbasierten Fortschritt.
 
-## Vorschau
-
-### Café und Mitarbeitersystem
-
-| Café-Hauptansicht | Mitarbeitersystem |
-|---|---|
-| <img src="Docs/Screenshots/Cafe_Ansicht.jpg" alt="Hauptansicht des Cafés" width="450"> | <img src="Docs/Screenshots/Team_Mitarbeiter_Ansicht.jpg" alt="Übersicht der Mitarbeitenden" width="450"> |
-| Gäste, Tische, Bestellungen und zentrale Caféverwaltung | Verwaltung des Teams und der Mitarbeitenden |
-
-### Rekrutierung und Schichtplanung
-
-| Mitarbeitende rekrutieren | Schichten planen |
-|---|---|
-| <img src="Docs/Screenshots/Recruit_Ansicht.jpg" alt="Rekrutierung neuer Mitarbeitender" width="450"> | <img src="Docs/Screenshots/Schichten_Ansicht.jpg" alt="Planung der Arbeitsschichten" width="450"> |
-| Auswahl und Rekrutierung neuer Teammitglieder | Einteilung der Mitarbeitenden in verschiedene Schichten |
-
-### Rezepte und Upgrades
-
-| Rezeptverwaltung | Café-Upgrades |
-|---|---|
-| <img src="Docs/Screenshots/Rezepte_Ansicht.jpg" alt="Verwaltung der Rezepte" width="450"> | <img src="Docs/Screenshots/Upgrade_Ansicht.jpg" alt="Übersicht der Café-Upgrades" width="450"> |
-| Freischaltung und Verbesserung verschiedener Rezepte | Weiterentwicklung und Ausbau des Cafés |
-
-### Warenlieferung
+> Dieses öffentliche Repository ist eine bewusst reduzierte Portfolio-Dokumentation.  
+> Das vollständige Godot-Projekt und die zentrale Spiellogik befinden sich in einem privaten Entwicklungs-Repository.
 
 <p align="center">
-  <img
-    src="Docs/Screenshots/Waren_Lieferung_Ansicht.jpg"
-    alt="Verwaltung der Warenlieferung"
-    width="700"
-  >
+  <img src="docs/screenshots/cafe_uebersicht.jpg" alt="Café-Hauptansicht von Midnight Spirit Café" width="100%">
 </p>
 
-<p align="center">
-  Verwaltung eingehender Lieferungen und des verfügbaren Warenbestands.
-</p>
+## Projekt in 30 Sekunden
 
-## Spielidee
+| Bereich | Stand |
+|---|---|
+| Engine | Godot 4.7 |
+| Sprache | GDScript |
+| Genre | Idle Game / Café Management |
+| Status | Spielbarer Prototyp, aktiv in Entwicklung |
+| Meine Aufgaben | Konzeption, Architektur, Implementierung, UI-Prototyping, Debugging und Dokumentation |
+| Schwerpunkt | Zusammenspiel mehrerer persistenter und zeitbasierter Spielsysteme |
 
-Das Spiel kombiniert automatische Idle-Abläufe mit aktiven Managemententscheidungen. Gäste betreten das Café, warten auf einen Platz, bestellen ein freigeschaltetes Produkt und werden abhängig von Zutatenbestand, Zubereitungszeit und Mitarbeitereinsatz bedient.
+Der Prototyp simuliert einen vollständigen Café-Ablauf:
 
-Der erzielte Umsatz fließt in neue Rezepte, bessere Ausstattung, zusätzliche Sitzplätze, Mitarbeitende und weitere Ausbauoptionen.
+```text
+Gast erscheint
+→ Warteschlange
+→ Bestellung
+→ Zutatenprüfung
+→ Zubereitung
+→ Bedienung am Tresen oder Tisch
+→ Bezahlung
+→ Fortschritt und Upgrades
+```
 
-## Bereits umgesetzte Systeme
+## Umgesetzte Systeme
 
-### Café und Gäste
+### Café-Simulation
 
-- Warteschlange, Tresen, Sitzplätze und belegte Tische
-- Automatisch erzeugte Gäste mit Wartezeit und Geduld
-- Aufnahme, Vorbereitung und Auslieferung von Bestellungen
-- Verhalten bei fehlenden Zutaten
-- Einnahmen durch erfolgreich bediente Gäste
-- Fortschritt über mehrere Café-Stufen
+- Warteschlange, Tresen und Sitzplätze
+- Gäste mit Wartezeit und Geduld
+- Bestellaufnahme, Zubereitung, Servieren und Bezahlung
+- Behandlung fehlender Zutaten
+- Café-Stufen und Freischaltbedingungen
 
-### Rezepte und Inventar
+### Inventar, Rezepte und Lieferungen
 
-- Zutatenbestände mit begrenzter Lagerkapazität
-- Getränke und Speisen mit individuellen Rezepten
-- Freischaltung neuer Produkte über Café-, Maschinen- oder Ofenfortschritt
-- Rezeptlevel, Verkaufspreise und Zubereitungszeiten
-- Unterschiedliche Gewichtungen für die zufällige Produktauswahl
-- Prüfung und Verbrauch benötigter Zutaten
+- Zutaten mit individuellen Lagergrenzen
+- Rezepte mit Zutatenbedarf, Preis und Zubereitungszeit
+- Freischaltungen über Café-, Maschinen- und Ofenfortschritt
+- zeitbasierte Lieferungen und begrenzte Notfalllieferungen
 
-### Mitarbeitende
+### Mitarbeitende und Schichten
 
-- Rekrutierung mit Tickets oder Diamanten
-- Mehrfachziehungen und Verarbeitung doppelter Charaktere
-- Aktive Mitarbeiterslots
-- Training, Sternstufen und individuelle Werte
+- Mitarbeitende mit Werten, Rollen und Fähigkeiten
 - Zufriedenheit, Pausen und Gespräche
-- Aktive und passive Fähigkeiten
-- Rollen- und Aufgabenboni
-- Einfluss auf Bedienzeit, Kundengeduld, Verkaufspreise und Offline-Ertrag
+- aktive und passive Effekte
+- Tag- und Spätschichten
+- Drag-and-drop-Zuweisung
+- optionale 24-Stunden-Öffnung
 
-### Schichten und Öffnungszeiten
+### Rekrutierung und Fortschritt
 
-- Konfigurierbare Öffnungs- und Schließzeiten
-- Mehrere Arbeitsschichten und zugeordnete Teams
-- Drag-and-drop-Zuweisung von Mitarbeitenden
-- Optionaler 24-Stunden-Betrieb
-- Berücksichtigung von Schichten bei Offline-Zeiträumen
-
-### Ausbau und Wirtschaft
-
-- Kaffeemaschinen-Upgrades
-- Zusätzliche Sitzplätze
-- Verbesserter Produktwert
-- Café-Stufen mit Voraussetzungen
-- Freischaltbare Bäckerei
-- Verbesserbarer Bäckerei-Ofen
-- Zeitbasierte Warenlieferungen
-- Begrenzte kostenlose Notfalllieferungen
+- Rekrutierung mit unterschiedlichen Währungen
+- Einzel- und Mehrfachrekrutierung
+- Verarbeitung doppelter Figuren über Fortschrittsressourcen
+- Training, Level und Sternstufen
+- Upgrades für Maschinen, Sitzplätze und Produktwert
 
 ### Speicherung und Idle-Fortschritt
 
-- Lokaler Spielstand über Godots `user://`-Verzeichnis
-- Speichern und Laden zentraler Spielsysteme
-- Zeitstempel zur Berechnung vergangener Zeit
-- Offline-Einnahmen mit einer Begrenzung auf maximal 24 Stunden
-- Berücksichtigung aktiver Mitarbeitender und Schichten im Offline-Fortschritt
-
-### Weitere Funktionen
-
-- Deutsche und englische UI-Texte
-- Debug-Werkzeuge zum Testen von Währungen, Zutaten, Rezepten und Spielständen
-- Dynamisch erzeugte und aktualisierte UI-Komponenten
-- Robuste Suche und Wiederherstellung wichtiger UI-Referenzen
-
-## Technologie-Stack
-
-| Bereich | Technologie |
-|---|---|
-| Game Engine | Godot 4.7 |
-| Programmiersprache | GDScript |
-| Rendering | GL Compatibility |
-| Speicherung | Godot `FileAccess` / lokaler Spielstand |
-| Benutzeroberfläche | Godot-Control-Nodes und dynamisch erzeugte UI |
-| Architektur | Zentraler Spielkoordinator mit spezialisierten Managerklassen |
+- lokaler Spielstand über Godots `user://`-Verzeichnis
+- getrennte Zustände der fachlichen Manager
+- defensive Wiederherstellung gespeicherter Dictionaries
+- Zeitstempel für Offline-Fortschritt
+- begrenzte Offline-Berechnung
 
 ## Architektur
 
-Die Spiellogik ist in mehrere fachlich getrennte Manager aufgeteilt. Dadurch können einzelne Systeme unabhängig weiterentwickelt und gespeichert werden.
+Der Prototyp verwendet einen zentralen Koordinator und mehrere fachlich getrennte Manager. Dadurch sind Inventar, Gäste, Mitarbeitende, Schichten, Upgrades und Speicherung als eigenständige Verantwortungsbereiche modelliert.
 
-| Komponente | Verantwortung |
-|---|---|
-| `CafeManager` | Café-Stufe, Fortschritt und Freischaltungen |
-| `KundenManager` | Gäste, Warteschlange, Bestellungen und Bezahlung |
-| `InventarManager` | Zutaten, Rezepte, Freischaltungen und Herstellung |
-| `MitarbeiterSystem` | Mitarbeitende, Fähigkeiten, Zufriedenheit und Aufgaben |
-| `SchichtManager` | Öffnungszeiten, Teams und Schichtzuweisungen |
-| `RecruitManager` | Rekrutierung und Duplikatverarbeitung |
-| `UpgradeManager` | Kaffeemaschine, Sitzplätze und Produktwert |
-| `LieferungManager` | Lieferoptionen, Timer und Warenzugang |
-| `BaeckereiManager` | Bäckereifreischaltung und Ofen-Upgrades |
-| `SpeicherManager` | Lokales Speichern, Laden und Zeitstempel |
-| `TexteManager` | Deutsche und englische UI-Texte |
-| `DebugManager` | Entwicklungs- und Testaktionen |
+```mermaid
+flowchart TB
+    UI[Seiten, HUD und Eingaben] --> MAIN[Zentraler Spielkoordinator]
 
-## Projekt lokal starten
+    MAIN --> CAFE[Café-Fortschritt]
+    MAIN --> CUSTOMER[Gäste und Bestellungen]
+    MAIN --> INVENTORY[Inventar und Rezepte]
+    MAIN --> STAFF[Mitarbeitende]
+    MAIN --> SHIFT[Schichten und Öffnungszeiten]
+    MAIN --> RECRUIT[Rekrutierung]
+    MAIN --> UPGRADE[Upgrades]
+    MAIN --> DELIVERY[Lieferungen]
+    MAIN --> SAVE[Speicherung]
 
-### Voraussetzungen
+    CUSTOMER --> INVENTORY
+    SHIFT --> STAFF
+    UPGRADE --> CAFE
+    DELIVERY --> INVENTORY
 
-- Godot 4.7 oder eine kompatible Godot-4-Version
-- Git für das Klonen des Repositorys
-
-### Start
-
-```bash
-git clone <REPOSITORY-URL>
-cd <REPOSITORY-ORDNER>
+    SAVE -. Zustände laden und speichern .-> MAIN
 ```
 
-Anschließend:
-
-1. `project.godot` im Godot Project Manager importieren.
-2. Das Projekt mit Godot 4.7 öffnen.
-3. Die Hauptszene `res://scenes/main/main.tscn` starten.
-
-## Projektstruktur
-
-```text
-.
-├── project.godot
-├── scenes/
-│   ├── main/
-│   └── ui/
-└── scripts/
-    ├── ui/
-    ├── main.gd
-    ├── cafe_manager.gd
-    ├── kunden_manager.gd
-    ├── inventar_manager.gd
-    ├── mitarbeiter_system.gd
-    ├── schicht_manager.gd
-    ├── recruit_manager.gd
-    ├── upgrade_manager.gd
-    └── weitere Manager
-```
+Eine ausführlichere Einordnung steht in [docs/ARCHITEKTUR.md](docs/ARCHITEKTUR.md).
 
 ## Technische Herausforderungen
 
-- Synchronisierung mehrerer voneinander abhängiger Spielsysteme
-- Berechnung zeitbasierter Abläufe während und außerhalb der aktiven Spielsitzung
-- Sichere Migration und Wiederherstellung gespeicherter Dictionaries
-- Dynamische UI-Aktualisierung bei Änderungen an Inventar, Gästen und Mitarbeitenden
-- Trennung von Spiellogik, UI-Darstellung und Speicherlogik
-- Balancing von Preisen, Wartezeiten, Freischaltungen und Upgrades
+- mehrere voneinander abhängige Systeme konsistent halten
+- zeitbasierte Abläufe während und außerhalb der aktiven Spielsitzung berechnen
+- gespeicherte Daten robust und mit sicheren Standardwerten laden
+- dynamische UI-Inhalte mit veränderlichen Spielzuständen synchronisieren
+- Öffnungszeiten, Schichten und Mitarbeiterboni gemeinsam auswerten
+- den gewachsenen Prototyp ohne Funktionsverlust schrittweise refaktorieren
 
-## Aktueller Entwicklungsstand
+## Bewusster Umgang mit technischem Schuldenstand
 
-Das Projekt ist ein spielbarer Prototyp und wird fortlaufend strukturell sowie spielmechanisch weiterentwickelt. Die Kernsysteme sind bereits miteinander verbunden; Grafik, Balancing, automatisierte Tests, Audio und finaler Spielfluss befinden sich noch in Arbeit.
+Der erste spielbare Stand wurde schnell zu einem systemreichen Prototyp. Dadurch wurde der zentrale Koordinator im Laufe der Entwicklung zu groß und die UI wird an einigen Stellen noch stärker zur Laufzeit erzeugt als langfristig sinnvoll.
 
-## Geplante Weiterentwicklung
+Die laufende Überarbeitung erfolgt deshalb in überprüfbaren Schritten:
 
-- Weitere Mitarbeitende mit individuellen Fähigkeiten und Dialogen
-- Zusätzliche Rezepte, Zutaten und Café-Stufen
-- Überarbeitung des visuellen Designs und eigene Art Assets
-- Audio, Musik und Feedback-Effekte
-- Tutorial und verständlicherer Einstieg
-- Balancing-Werkzeuge und externe Konfigurationsdaten
-- Automatisierte Tests für Berechnungs- und Speichersysteme
-- Weitere Aufteilung des zentralen Spielkoordinators
-- Export eines spielbaren Demo-Builds
+1. Projekt- und Cache-Altlasten bereinigen
+2. Szenenbaum und Node-Namen vereinheitlichen
+3. Verantwortlichkeiten aus dem zentralen Koordinator auslagern
+4. UI-Aktualisierung von vollständigen Frame-Updates auf Signale und Dirty-Flags umstellen
+5. die aktuelle Drei-Spalten-Ansicht durch eine zusammenhängende Café-Raumansicht ersetzen
 
-## Motivation und Lernziele
+Diese Entscheidung und der aktuelle Stand sind in [docs/ROADMAP.md](docs/ROADMAP.md) dokumentiert.
 
-Mit diesem Projekt entwickle ich ein vollständiges, systemorientiertes Spiel statt nur einzelner Mechaniken. Der Schwerpunkt liegt auf modularer Spiellogik, Zustandsverwaltung, persistenter Speicherung, dynamischen Benutzeroberflächen und dem Zusammenspiel vieler voneinander abhängiger Systeme.
+## Ausgewählter Code-Einblick
 
-## Lizenz
+Unter [code_samples/cafe_progression_example.gd](code_samples/cafe_progression_example.gd) liegt ein kleiner, generalisierter GDScript-Auszug. Er zeigt:
 
-Dieses Projekt dient derzeit als persönliches Portfolio- und Lernprojekt. Eine Open-Source-Lizenz wurde noch nicht festgelegt.
+- typisierte Funktionssignaturen
+- Validierung vor Zustandsänderungen
+- Signal-basierte Benachrichtigung
+- defensive Serialisierung und Deserialisierung
+
+Der Auszug enthält bewusst keine Produktionswerte, vollständigen Manager oder direkt übernehmbare Kernlogik.
+
+## Weitere Ansichten
+
+<table>
+  <tr>
+    <td width="50%"><img src="docs/screenshots/mitarbeiter.jpg" alt="Mitarbeitersystem"></td>
+    <td width="50%"><img src="docs/screenshots/schichtplanung.jpg" alt="Schichtplanung"></td>
+  </tr>
+  <tr>
+    <td align="center"><strong>Mitarbeitersystem</strong></td>
+    <td align="center"><strong>Schichtplanung</strong></td>
+  </tr>
+  <tr>
+    <td><img src="docs/screenshots/recruit_system.jpg" alt="Rekrutierungssystem"></td>
+    <td><img src="docs/screenshots/upgrades.jpg" alt="Upgrade-System"></td>
+  </tr>
+  <tr>
+    <td align="center"><strong>Rekrutierung</strong></td>
+    <td align="center"><strong>Upgrades</strong></td>
+  </tr>
+  <tr>
+    <td><img src="docs/screenshots/rezepte.jpg" alt="Rezeptverwaltung"></td>
+    <td><img src="docs/screenshots/lieferung.jpg" alt="Lieferung und Inventar"></td>
+  </tr>
+  <tr>
+    <td align="center"><strong>Rezepte</strong></td>
+    <td align="center"><strong>Lieferungen und Inventar</strong></td>
+  </tr>
+</table>
+
+## Qualitätssicherung
+
+Der aktuelle Prototyp wird nach strukturellen Änderungen über einen wiederholbaren manuellen Smoke-Test geprüft. Dazu gehören unter anderem:
+
+- Projektstart und Seitennavigation
+- Café-Ablauf und Bestellungen
+- Rekrutierung mit beiden Währungen
+- Upgrades und korrekter Ressourcenabzug
+- Lieferungen und Rezeptfreischaltungen
+- Schichten und Öffnungszeiten
+- Speichern, Neustart und Laden
+
+Das öffentliche Repository besitzt zusätzlich einen automatischen Schutzcheck. Er verhindert, dass versehentlich vollständige Godot-Szenen, Produktionsskripte oder `project.godot` veröffentlicht werden.
+
+Details: [docs/QUALITAETSSICHERUNG.md](docs/QUALITAETSSICHERUNG.md)
+
+## Warum der vollständige Quellcode nicht öffentlich ist
+
+Dieses Repository soll Arbeitgebern meine Arbeitsweise, Systemarchitektur, technische Entscheidungen und den sichtbaren Entwicklungsstand zeigen. Es ist kein Open-Source-Release.
+
+Nicht enthalten sind insbesondere:
+
+- das startbare Godot-Projekt
+- Produktionsszenen und Ressourcen
+- vollständige Manager und der zentrale Koordinator
+- Speicher- und Offline-Logik
+- konkrete Balancingwerte und Inhaltsdaten
+- interne Debug-Werkzeuge
+
+Ein geführter Code-Walkthrough des privaten Projekts kann im Rahmen eines Bewerbungsprozesses erfolgen.
+
+## Dokumentation
+
+- [Architektur](docs/ARCHITEKTUR.md)
+- [Technische Entscheidungen](docs/TECHNISCHE_ENTSCHEIDUNGEN.md)
+- [Qualitätssicherung](docs/QUALITAETSSICHERUNG.md)
+- [Roadmap und Refactoring](docs/ROADMAP.md)
+- [English project summary](README_EN.md)
+
+## Autor
+
+**Justin Plath**  
+Softwareentwicklung mit Schwerpunkt auf systemorientierten Anwendungen, Zustandsverwaltung und pragmatischer Problemlösung.
+
+Kontakt über mein GitHub-Profil.
+
+## Rechte
+
+Dieses Repository gewährt keine Open-Source-Lizenz. Inhalte dürfen betrachtet und im Rahmen einer Portfolio-Bewertung verlinkt werden. Weitere Nutzung, Vervielfältigung oder Weitergabe ist nicht gestattet.
+
+Siehe [NOTICE.md](NOTICE.md).
