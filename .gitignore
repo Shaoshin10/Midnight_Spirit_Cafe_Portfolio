@@ -1,0 +1,18 @@
+# Betriebssystem
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Editoren
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Python
+__pycache__/
+*.py[cod]
+
+# Lokale Hilfsdateien
+*.log
+*.bak
